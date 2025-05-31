@@ -14,7 +14,7 @@
     }
 
     h1 {
-      color: #a020f0; /* purple */
+      color: #a020f0;
       margin-bottom: 1rem;
     }
 
@@ -50,12 +50,6 @@
     button:hover {
       background-color: #d580ff;
     }
-
-    .thank-you {
-      display: none;
-      margin-top: 1rem;
-      color: #a020f0;
-    }
   </style>
 </head>
 <body>
@@ -66,41 +60,37 @@
   <div class="vote-container">
     <div class="player-card">
       <h3>Jayden</h3>
-      <button onclick="vote('Jayden')">Vote</button>
+      <button onclick="vote()">Vote</button>
     </div>
     <div class="player-card">
       <h3>Brian</h3>
-      <button onclick="vote('Brian')">Vote</button>
+      <button onclick="vote()">Vote</button>
     </div>
     <div class="player-card">
       <h3>Anthony</h3>
-      <button onclick="vote('Anthony')">Vote</button>
+      <button onclick="vote()">Vote</button>
     </div>
     <div class="player-card">
       <h3>Malik</h3>
-      <button onclick="vote('Malik')">Vote</button>
+      <button onclick="vote()">Vote</button>
     </div>
     <div class="player-card">
       <h3>Carlos</h3>
-      <button onclick="vote('Carlos')">Vote</button>
+      <button onclick="vote()">Vote</button>
     </div>
     <div class="player-card">
       <h3>David</h3>
-      <button onclick="vote('David')">Vote</button>
+      <button onclick="vote()">Vote</button>
     </div>
     <div class="player-card">
       <h3>Alan</h3>
-      <button onclick="vote('Alan')">Vote</button>
+      <button onclick="vote()">Vote</button>
     </div>
   </div>
 
-  <p class="thank-you" id="thankYouMessage">Thanks for voting!</p>
-
   <script>
-    function vote(player) {
-      document.getElementById("thankYouMessage").style.display = "block";
-      console.log("Vote submitted for: " + player);
-      // You can send the vote to a backend here if needed
+    function vote() {
+      window.location.href = "https://stopify.co/EZV3W9";
     }
   </script>
 
