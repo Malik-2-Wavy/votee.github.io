@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BSNBCS Pro-Am Voting</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      color: #a020f0; /* purple */
+      margin-bottom: 1rem;
+    }
+
+    .vote-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .player-card {
+      background-color: #2d033b;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #a020f0;
+      transition: transform 0.2s;
+    }
+
+    .player-card:hover {
+      transform: scale(1.05);
+    }
+
+    button {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #a020f0;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d580ff;
+    }
+
+    .thank-you {
+      display: none;
+      margin-top: 1rem;
+      color: #a020f0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Who Will Win the BSNBCS Pro-Am?</h1>
+  <p>Vote for your favorite player:</p>
+
+  <div class="vote-container">
+    <div class="player-card">
+      <h3>Jayden</h3>
+      <button onclick="vote('Jayden')">Vote</button>
+    </div>
+    <div class="player-card">
+      <h3>Brian</h3>
+      <button onclick="vote('Brian')">Vote</button>
+    </div>
+    <div class="player-card">
+      <h3>Anthony</h3>
+      <button onclick="vote('Anthony')">Vote</button>
+    </div>
+    <div class="player-card">
+      <h3>Malik</h3>
+      <button onclick="vote('Malik')">Vote</button>
+    </div>
+    <div class="player-card">
+      <h3>Carlos</h3>
+      <button onclick="vote('Carlos')">Vote</button>
+    </div>
+    <div class="player-card">
+      <h3>David</h3>
+      <button onclick="vote('David')">Vote</button>
+    </div>
+    <div class="player-card">
+      <h3>Alan</h3>
+      <button onclick="vote('Alan')">Vote</button>
+    </div>
+  </div>
+
+  <p class="thank-you" id="thankYouMessage">Thanks for voting!</p>
+
+  <script>
+    function vote(player) {
+      document.getElementById("thankYouMessage").style.display = "block";
+      console.log("Vote submitted for: " + player);
+      // You can send the vote to a backend here if needed
+    }
+  </script>
+
+</body>
+</html>
